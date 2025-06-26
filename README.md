@@ -11,7 +11,8 @@ for single step reaction use `run_one.sh` and for multistep use `run_multi.sh`. 
 ```sh
 python rand_run.py device_id
 ```
-For example, ```sh
+For example, 
+```sh
 python rand_run.py 0
 ```
 Further to know more, follow `new-README.md` inside that directory.
