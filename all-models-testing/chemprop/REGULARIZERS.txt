@@ -1,0 +1,18 @@
+self.regularizers = {
+    'zero_reg':
+        lambda P, I: torch.zeros_like(torch.norm(P * (1 - I)).sum())
+    'squared_fro_norm_inv':
+        lambda P, I: torch.square(torch.norm(P * (1 - I))).sum(),
+    'batched_fro_norm':
+        lambda P, I: torch.norm(P * I, dim = 0).sum(),
+    'batched_fro_norm_inv':
+        lambda P, I: torch.norm(P * (1 - I), dim = 0).sum(),
+    'squared_fro_norm':
+        lambda P, I: torch.square(torch.norm(P * I)).sum(),
+    'fro_norm_inv':
+        lambda P, I: torch.norm(P * (1 - I), dim=[1,2]).sum(),
+    'sqrt_squared_fro_norm_inv':
+        lambda P, I: torch.sqrt(torch.square(torch.norm(P * (1 - I))).sum()),
+    'abs_norm_inv':
+        lambda P, I: torch.abs(P * (1 - I)).sum()
+}
