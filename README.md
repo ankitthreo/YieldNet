@@ -1,8 +1,8 @@
-# yield-pred
-
+# YieldNet
+Yield prediction with continuous surrogate TS (CGR) computation
 
 ## Training from scratch
-To train the models, run the followings
+To train the models, run the following
 ```sh
 pip install -r requirements.txt
 cd YieldNet
