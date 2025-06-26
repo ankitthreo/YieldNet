@@ -24,11 +24,11 @@ defualt it is soft permutation).
 defualt it is `"max"`). Alternative is `"dot"`
 - `gumbel_noise_factor`: float value for the factor with which the sample noise from
 the Gumbel distribution has to be scaled before adding at start of Sinkhorn iterations.
-The default value is 1.0.
+The default value is `1.0`.
 - `gumbel_temperature`: float value for the temperature used in Sinkhorn iterations. The
-default value is 0.1.
+default value is `0.1`.
 - `sinkhorn_iters`: int value for the number of iterations in Sinkhorn. The default value
-is 10.
+is `10`.
 - `use_indicator`: boolean for using the indicator matrix along with the permutation. This
 is a matrix which indicates whether atom at index "i" in the reactant is the same (by
 atomic number) as the atom at index "j" in the product. Hence when this matrix is used
@@ -40,7 +40,7 @@ There are several regularizers already implemented. The functional forms of each
 the file REGULARIZERS.txt as well. By default, the `'squared_fro_norm_inv'` is used.
 - `perm_reg_lambda`: float value for the lambda to be used along with the regularizer loss.
 This hyper-parameter can be tuned as needed. The permutation loss is added to the model
-MSE loss after scaling by lambda. The default value is 0.01.
+MSE loss after scaling by lambda. The default value is `0.01`.
 - `loss_agg_func`: Literal indicating the aggregator to be used for the MSE loss, before
 adding the permutation loss. By default the `'sum'` is used.
 - `use_node_tf`: boolean indicating whether to use the transformer on node embeddings or not.
